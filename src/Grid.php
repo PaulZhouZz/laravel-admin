@@ -710,9 +710,9 @@ class Grid
      *
      * @return string
      */
-    public function renderExportButton()
+    public function renderExportButton($button = null)
     {
-        return (new Tools\ExportButton($this))->render();
+        return ($button ?: (new Tools\ExportButton($this)))->render();
     }
 
     /**
